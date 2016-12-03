@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ionicApp">
+<head>
+    <title>
+        Portal notificări restaurant
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--Use min versions for production-->
+    <link href="http://code.ionicframework.com/1.0.0-beta.14/css/ionic.css" rel="stylesheet">
+    <link href="stylesheets/index-for-restaurants.css" rel="stylesheet" />
+    <script src="http://code.ionicframework.com/1.0.0-beta.14/js/ionic.bundle.js"></script>
+</head>
+
+<body ng-controller="MyCtrl">
+
+    <ion-header-bar align-title="center" class="primary-header bar-positive">
+        <i class="icon ion-gear-a" ng-hide="currentView !== 'home'" ng-click="switchView('settings')">
+        </i>
+        <i class="icon ion-home" ng-show="currentView === 'settings'" ng-click="switchView('home')">
+        </i>
+        <h1 class="title"><%= restaurantName %> </h1>
+    </ion-header-bar>
+
+    <ion-header-bar align-title="center" class="bar-subheader bar-positive">
+        <h1 class="title">{{viewDisplayName}}</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <ion-list show-delete="false" show-reorder="false" can-swipe="false" ng-hide="currentView !== 'home'">
+
+            <ion-item ng-repeat="item in items track by item.id" ng-click="onItemDelete(item)" class=" item-remove-animate">
+                <i class="icon ion-close assertive"></i>
+                Masa {{ item.id }}
+                <p class="time">{{ item.relativeTime }}</p>
+            </ion-item>
+
+            <ion-item ng-show="items.length === 0" class="message-item">
+                <h2>Bine lucrat! Sunteți la zi cu toate notificările.</h2>
+            </ion-item>
+
+        </ion-list>
+
+        <div class="settings-view" ng-show="currentView === 'settings'" ng-controller="SettingsCtrl">
+            <div class="list list-inset">
+                <h4>Schimbă parola</h4>
+                <p class="assertive" ng-show="passwordError">
+                    {{passwordError}}
+                </p>
+                <label class="item item-input">
+                    <input type="password" placeholder="Parola actuală" ng-model="oldPassword">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Parola nouă" ng-model="newPassword">
+                </label>
+            </div>
+
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Număr mese</span>
+                    <p class="error-message" ng-show="numberOfTablesError">
+                        {{numberOfTablesError}}
+                    </p>
+                    <input type="text" ng-model="numberOfTables" placeholder="50">
+                </label>
+            </div>
+
+            <p class="assertive" ng-show="serverSaveChangesError">{{ serverSaveChangesError }}</p>
+            <p class="balanced" ng-show="displaySuccessMessage">
+                Datele au fost salvate cu succes!
+            </p>
+
+            <button class="button button-positive" ng-click="saveChanges()">
+                Salvează modificări
+            </button>
+        </div>
+
+        <div id="sound"></div>
+
+    </ion-content>
+
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <h1 class="title">Copyright © 2015 - NuTeSupara.ro </h1>
+    </ion-footer-bar>
+
+    <!-- Socket.io -->
+    <script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
+    <script src="js/indexForRestaurants.js"></script>
+    <script src="js-lib/relativeDate.js"></script>
+    <script src="js/angular-services/restaurantService.js"></script>
+    <script src="js/angular-services/socketIoService.js"></script>
+    <script src="js-lib/google_analytics.js"></script>
+</body>
+
+</html>

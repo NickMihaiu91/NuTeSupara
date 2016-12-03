@@ -1,0 +1,46 @@
+{
+  "ProjectName": "SMSRedirect",
+  "ProjectGuid": "14c4b8ca-b89d-4d64-89d1-83599a509a09",
+  "projectVersion": 1,
+  "AppIdentifier": "com.nutesupara.SMSRedirect",
+  "DisplayName": "SMSRedirect",
+  "Author": "NuTeSupara",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [
+    "android.permission.BROADCAST_SMS",
+    "android.permission.READ_SMS",
+    "android.permission.RECEIVE_SMS",
+    "android.permission.SEND_SMS",
+    "android.permission.WRITE_SMS"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{513eacab-cee1-4654-9598-ef7b6c385f8e}",
+  "WP8ProductID": "{85d2c7dc-9873-4370-875c-c876c7c5a6ab}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.SMSRedirect",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}

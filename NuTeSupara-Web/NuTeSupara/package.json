@@ -1,0 +1,29 @@
+{
+  "name": "DingDong",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "description": "DingDong",
+  "author": {
+    "name": "RockIT",
+    "email": "rocktheit91@gmail.com"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "^1.8.4",
+    "connect-mongo": "^0.4.2",
+    "cookie-parser": "~1.3.3",
+    "debug": "^2.0.0",
+    "ejs": "~2.2.4",
+    "express": "^4.9.8",
+    "express-session": "^1.10.3",
+    "mongoose": "^3.8.23",
+    "morgan": "^1.3.2",
+    "passport": "^0.2.1",
+    "passport-local": "^0.1.6",
+    "passport.socketio": "^3.3.0",
+    "serve-favicon": "^2.1.7",
+    "socket.io": "^1.0.0",
+    "stylus": "^0.42.3"
+  }
+}

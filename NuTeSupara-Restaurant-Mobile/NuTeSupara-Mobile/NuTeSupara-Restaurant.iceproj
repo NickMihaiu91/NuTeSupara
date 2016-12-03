@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>e3110582-8f43-45f6-ac59-2def9bf5ab08</ProjectGuid>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectHome />
+    <ProjectName>NuTeSupara-Restaurant</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".abignore" />
+    <Content Include=".abproject" />
+    <Content Include=".debug.abproject" />
+    <Content Include=".release.abproject" />
+    <Content Include="App_Resources\Android\AndroidManifest.xml" />
+    <Content Include="App_Resources\Android\xml\config.xml" />
+    <Content Include="App_Resources\iOS\config.xml" />
+    <Content Include="cordova.android.js" />
+    <Content Include="cordova.ios.js" />
+    <Content Include="cordova.wp8.js" />
+    <Content Include="css\index-for-restaurants.css" />
+    <Content Include="index.html" />
+    <Content Include="js-lib\angular-1.3.0.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js-lib\ionic.bundle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js-lib\mobile-detect.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js-lib\socket.io-1.1.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\angular-services\loginService.js" />
+    <Content Include="js\indexForRestaurants.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\login.js" />
+    <Content Include="login.html" />
+    <Content Include="Plugins\LocalNotification-master\CHANGELOG.md" />
+    <Content Include="Plugins\LocalNotification-master\libs\android\android-support-v4.jar" />
+    <Content Include="Plugins\LocalNotification-master\LICENSE" />
+    <Content Include="Plugins\LocalNotification-master\plugin.xml" />
+    <Content Include="Plugins\LocalNotification-master\README.md" />
+    <Content Include="Plugins\LocalNotification-master\src\android\DeleteIntentReceiver.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\LocalNotification.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\notification\Asset.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\notification\Manager.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\notification\NotificationBuilder.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\notification\NotificationWrapper.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\notification\Options.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\Receiver.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\ReceiverActivity.java" />
+    <Content Include="Plugins\LocalNotification-master\src\android\Restore.java" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\AppDelegate+APPLocalNotification.h" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\AppDelegate+APPLocalNotification.m" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\APPLocalNotification.h" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\APPLocalNotification.m" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\APPLocalNotificationOptions.h" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\APPLocalNotificationOptions.m" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\UIApplication+APPLocalNotification.h" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\UIApplication+APPLocalNotification.m" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\UILocalNotification+APPLocalNotification.h" />
+    <Content Include="Plugins\LocalNotification-master\src\ios\UILocalNotification+APPLocalNotification.m" />
+    <Content Include="Plugins\LocalNotification-master\src\wp8\LocalNotification.cs" />
+    <Content Include="Plugins\LocalNotification-master\src\wp8\Options.cs" />
+    <Content Include="Plugins\LocalNotification-master\www\local-notification.js" />
+    <Content Include="sounds\dingalert.mp3">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sounds\dingalert.ogg" />
+    <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait@2x.png" />
+    <Resource Include="App_Resources\iOS\Default.png" />
+    <Resource Include="App_Resources\iOS\Default@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-40.png" />
+    <Resource Include="App_Resources\iOS\icon-40@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-40@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-60.png" />
+    <Resource Include="App_Resources\iOS\icon-60@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-60@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-72.png" />
+    <Resource Include="App_Resources\iOS\icon-72@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-76.png" />
+    <Resource Include="App_Resources\iOS\icon-76@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small@2x.png" />
+    <Resource Include="App_Resources\iOS\icon.png" />
+    <Resource Include="App_Resources\iOS\icon@2x.png" />
+    <Resource Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="css\index.css" />
+    <Content Include="img\cordova.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="js-lib\google_analytics.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js-lib\relativeDate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\angular-services\restaurantService.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\angular-services\socketIoService.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\xml\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="css\" />
+    <Folder Include="img\" />
+    <Folder Include="js-lib\" />
+    <Folder Include="js\" />
+    <Folder Include="js\angular-services\" />
+    <Folder Include="Plugins\LocalNotification-master\" />
+    <Folder Include="Plugins\LocalNotification-master\libs\" />
+    <Folder Include="Plugins\LocalNotification-master\libs\android\" />
+    <Folder Include="Plugins\LocalNotification-master\src\" />
+    <Folder Include="Plugins\LocalNotification-master\src\android\" />
+    <Folder Include="Plugins\LocalNotification-master\src\android\notification\" />
+    <Folder Include="Plugins\LocalNotification-master\src\ios\" />
+    <Folder Include="Plugins\LocalNotification-master\src\wp8\" />
+    <Folder Include="Plugins\LocalNotification-master\www\" />
+    <Folder Include="sounds\" />
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <Import Project="$(IceniumTargets)Build.targets" />
+  <!--
+    TODO: Uncomment this code if you need to customize the build process.
+    <Target Name="BeforeBuild">
+        <Message Text="TODO: Implement BeforeBuild" Importance="high" />
+    </Target>
+
+    <Target Name="AfterBuild">
+        <Message Text="TODO: Implement AfterBuild" Importance="high" />
+    </Target>
+    -->
+</Project>

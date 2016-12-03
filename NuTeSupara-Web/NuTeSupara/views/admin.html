@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form method="post" action="/createRestaurant">
+        <label for="restaurantName">Numele restaurantului:</label>
+        <input id="restaurantName" type="text" name="name" />
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" />
+        <label for="pass">Parola:</label>
+        <input id="pass" type="password" name="password" />
+        <label for="tablesNo">Numarul de mese:</label>
+        <input id="tablesNo" type="number" name="numberOfTables" value="10" min="5" max="800" />
+        <label for="facebookId">ID Facebook:</label>
+        <input id="facebookId" name="facebookId" />
+
+        <button type="submit">Creeaza restaurant</button>
+    </form>
+
+    <ul>
+        <% for(var i=0; i < restaurants.length; i++) { %>
+        <li>
+            <%= restaurants[i].name %> ->
+            <label for="tablesNo">Numarul de mese:</label>
+            <input id="<%= restaurants[i]._id %>" type="number" value="<%= restaurants[i].noOfTables %>" min="5" max="800" />
+            <button onclick="changeNoOfTables('<%= restaurants[i]._id %>')">Salveaza</button>
+        </li>
+        <% } %>
+    </ul>
+    <p id="message" style="color:red"></p>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+        function changeNoOfTables(restaurantId) {
+            var newNumberOfTables = $('#' + restaurantId).val();
+            $.post('/changeNoOfTables',
+                {
+                    restId: restaurantId,
+                    newNo: newNumberOfTables
+                }).success(function () {
+                    $('#message').text("Numarul de mese pentru " + restaurantId + " a fost modificat cu succes");
+                }).error(function (err) {
+                    $('#message').text("!!! Numarul de mese pentru " + restaurantId + " NU a fost modificat cu succes, eroarea: " + err.statusText);
+                    console.log(err, a, b, c);
+                });
+        }
+    </script>
+</body>
+</html>

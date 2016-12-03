@@ -1,0 +1,54 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext);
+
+.time {
+    display: inline;
+    float: right;
+    margin-right: 30px;
+}
+
+i {
+    margin-right: 5px;
+    font-size: 23px;
+}
+
+.item {
+    font-size: 20px;
+}
+    .item.message-item {
+        text-align: center;
+    }
+        .item.message-item h2 {
+            color: rgb(65, 65, 153);
+        }
+
+ion-header-bar.bar.primary-header .title {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+ion-header-bar.bar.bar-positive i {
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+ion-footer-bar.bar.bar-positive .title {
+    color: #CAE4E2;
+}
+
+.settings-view {
+    text-align: center;
+}
+
+.list .item-stacked-label {
+    text-align: left;
+}
+    .list .item-stacked-label p.error-message {
+        color: #ef473a;
+    }
+
+.list.list-inset {
+    text-align: left;
+}

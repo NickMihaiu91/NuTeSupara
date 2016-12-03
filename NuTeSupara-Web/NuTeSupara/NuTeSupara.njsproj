@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NuTeSupara</Name>
+    <RootNamespace>DingDong</RootNamespace>
+    <DebuggerPort>1342</DebuggerPort>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>021f6d6a-95e0-4482-8626-4e7b72672ac7</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>9876</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="config\dbConnect.js" />
+    <Compile Include="config\passport.js" />
+    <Compile Include="config\socketIo.js" />
+    <Compile Include="controllers\genericController.js" />
+    <Compile Include="controllers\socketIoController.js" />
+    <Compile Include="middleware\isLoggedIn.js" />
+    <Compile Include="models\accessCodeModel.js" />
+    <Compile Include="models\adminModel.js" />
+    <Compile Include="models\restaurantModel.js" />
+    <Compile Include="public\js-lib\classie.js" />
+    <Compile Include="public\js-lib\google_analytics.js" />
+    <Compile Include="public\js-lib\modernizr.custom.js" />
+    <Compile Include="public\js-lib\progressButton.js" />
+    <Compile Include="public\js-lib\relativeDate.js" />
+    <Compile Include="public\js-lib\roundProgress.min.js" />
+    <Compile Include="public\js-lib\waypoints.min.js" />
+    <Compile Include="public\js\angular-services\clientService_social.js" />
+    <Compile Include="public\js\angular-services\clientService.js" />
+    <Compile Include="public\js\client_ding_social.js" />
+    <Compile Include="public\js\angular-services\restaurantService.js" />
+    <Compile Include="public\js\angular-services\socketIoService.js" />
+    <Compile Include="public\js\client_ding.js" />
+    <Compile Include="public\js\index.js" />
+    <Compile Include="public\js\indexForRestaurants.js" />
+    <Compile Include="repositories\accessCodeRepository.js" />
+    <Compile Include="repositories\adminRepository.js" />
+    <Compile Include="repositories\restaurantRepository.js" />
+    <Compile Include="public\js-lib\relativeDate.js" />
+    <Compile Include="public\js\indexForRestaurants.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\clients.js" />
+    <Compile Include="routes\restaurant.js" />
+    <Content Include="config\config.json" />
+    <Content Include="package.json" />
+    <Content Include="public\images\nutesupara.jpg" />
+    <Content Include="public\images\waiter.jpg" />
+    <Content Include="public\stylesheets\client_style_social.css" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\sounds\dingalert.ogg" />
+    <Content Include="public\stylesheets\client_style.css" />
+    <Content Include="public\stylesheets\homepage.css" />
+    <Content Include="public\stylesheets\index-for-restaurants.css" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\stylesheets\vendor\animate.min.css" />
+    <Content Include="public\stylesheets\vendor\progress-button.css" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="config\" />
+    <Folder Include="models\" />
+    <Folder Include="middleware\" />
+    <Folder Include="controllers\" />
+    <Folder Include="public\js\angular-services\" />
+    <Folder Include="public\js-lib\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\sounds\" />
+    <Folder Include="public\stylesheets\vendor\" />
+    <Folder Include="repositories\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\js-lib\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\admin.html" />
+    <Content Include="views\adminLogin.html" />
+    <Content Include="views\client_index_social.html" />
+    <Content Include="views\client_index.html" />
+    <Content Include="views\error.ejs" />
+    <Content Include="views\index-for-restaurants.html" />
+    <Content Include="views\index.html" />
+    <Content Include="views\login.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+    <Content Include="bin\ChangeConfig.ps1" />
+    <Content Include="bin\download.ps1" />
+    <Content Include="bin\setup_web.cmd" />
+    <Content Include="bin\node.cmd" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app="ionicApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="http://code.ionicframework.com/1.0.0-beta.14/css/ionic.min.css" rel="stylesheet" />
+    <link href="css/index-for-restaurants.css" rel="stylesheet" />
+    <script src="js-lib/ionic.bundle.js"></script>
+    <title>Portal!</title>
+</head>
+
+<body ng-controller="MyCtrl">
+
+    <ion-header-bar align-title="center" class="primary-header bar-positive">
+        <i class="icon ion-gear-a" ng-hide="currentView !== 'home'" ng-click="switchView('settings')">
+        </i>
+        <i class="icon ion-home" ng-show="currentView === 'settings'" ng-click="switchView('home')">
+        </i>
+        <h1 class="title">{{ restaurantName }} </h1>
+    </ion-header-bar>
+
+    <ion-header-bar align-title="center" class="bar-subheader bar-positive">
+        <h1 class="title">{{viewDisplayName}}</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <ion-list show-delete="false" show-reorder="false" can-swipe="false" ng-hide="currentView !== 'home'">
+
+            <ion-item ng-repeat="item in items track by item.id" ng-click="onItemDelete(item)" class=" item-remove-animate">
+                <i class="icon ion-close assertive"></i>
+                Masa {{ item.id }}
+                <p class="time">{{ item.relativeTime }}</p>
+            </ion-item>
+
+            <ion-item ng-show="items.length === 0" class="message-item">
+                <h2>Bine lucrat! Sunteți la zi cu toate notificările.</h2>
+            </ion-item>
+
+        </ion-list>
+
+        <div class="settings-view" ng-show="currentView === 'settings'" ng-controller="SettingsCtrl">
+            <div class="list list-inset">
+                <h4>Schimbă parola</h4>
+                <p class="assertive" ng-show="passwordError">
+                    {{passwordError}}
+                </p>
+                <label class="item item-input">
+                    <input type="password" placeholder="Parola actuală" ng-model="oldPassword">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Parola nouă" ng-model="newPassword">
+                </label>
+            </div>
+
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Număr mese</span>
+                    <p class="error-message" ng-show="numberOfTablesError">
+                        {{numberOfTablesError}}
+                    </p>
+                    <input type="text" ng-model="numberOfTables" placeholder="50">
+                </label>
+            </div>
+
+            <p class="assertive" ng-show="serverSaveChangesError">{{ serverSaveChangesError }}</p>
+            <p class="balanced" ng-show="displaySuccessMessage">
+                Datele au fost salvate cu succes!
+            </p>
+
+            <button class="button button-positive" ng-click="saveChanges()">
+                Salvează modificări
+            </button>
+        </div>
+
+    </ion-content>
+
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <h1 class="title">Copyright © 2015 - NuTeSupara.ro </h1>
+    </ion-footer-bar>
+
+    <!-- Socket.io -->
+    <script src="js-lib/socket.io-1.1.0.js"></script>
+    <script src="js/indexForRestaurants.js"></script>
+    <script src="js-lib/relativeDate.js"></script>
+    <script src="js/angular-services/restaurantService.js"></script>
+    <script src="js/angular-services/socketIoService.js"></script>
+    <script src="js-lib/google_analytics.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js-lib/mobile-detect.min.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</body>
+</html>

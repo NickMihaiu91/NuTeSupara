@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html ng-app="loginApp">
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body ng-controller="PageCtrl">
+    <p style="color:darkred" ng-show="errorMessage">{{ errorMessage }}</p>
+
+    <label for="email">
+        E-mail:
+    </label>
+    <input type="text" id="email" name="email" required ng-model="email"/>
+
+    <label for="password">
+        Parola:
+    </label>
+    <input type="password" id="password" name="password" required ng-model="password" />
+
+    <button type="submit" ng-click="login()">Login</button>
+
+    <script src="js-lib/angular-1.3.0.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/angular-services/loginService.js"></script>
+</body>
+</html>

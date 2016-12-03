@@ -1,0 +1,42 @@
+{
+  "ProjectName": "NuTeSupara-Restaurant",
+  "ProjectGuid": "e3110582-8f43-45f6-ac59-2def9bf5ab08",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.NuTeSuparaMobile",
+  "DisplayName": "NuTeSupara",
+  "Author": "RockIT",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [
+    "android.permission.VIBRATE"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{e968c5c7-0cd4-44cf-a78f-d8acb58f2b7b}",
+  "WP8ProductID": "{c43c154e-54bb-44e5-aeca-9feb593e2661}",
+  "WPSdk": "8.0",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.DingDongMobile"
+}

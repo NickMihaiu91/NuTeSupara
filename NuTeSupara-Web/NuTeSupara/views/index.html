@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Nu te supara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Font awesome CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Animate CSS -->
+    <link href="../stylesheets/vendor/animate.min.css" rel="stylesheet" />
+
+    <link href="../stylesheets/vendor/progress-button.css" rel="stylesheet" />
+    <link href="../stylesheets/homepage.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="pre-loader">
+        <div class="load-con">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=643253069104728&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="fa fa-bars fa-lg"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h2 class="navbar-title">Nu te supăra</h2>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#about">Despre</a>
+                        </li>
+                        <li>
+                            <a href="#propose">Propune un restaurant</a>
+                        </li>
+                        <li>
+                            <a href="#contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-->
+        </nav>
+
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <p class="message-text"> Ești la doar un pas de a notifica chelnerul, introdu codul mesei: </p>
+                <input class="table-code-input" type="text" placeholder="Codul mesei" />
+                <button class="progress-button send-code-button" data-style="fill" data-horizontal>
+                    <span class="content">Trimite</span>
+                    <span class="progress">
+                        <span class="progress-inner"></span>
+                    </span>
+                </button>
+                <div class="navigate-down">
+                    <a href="#about">
+                        <i class="fa fa-3x fa-angle-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+        <section id="about">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect4">
+                    <h1>Despre</h1>
+                    <div class="divider"></div>
+                    <p>Cel mai simplu si rapid mod de a chema ospatarul folosind propriul telefon</p>
+                </div>
+
+                <div>
+                    <img class="img-responsive" src="images/NuteSupara-A5-v35.jpg" />
+                </div>
+
+                <div class="like-container">
+                    <div class="fb-like" data-href="https://www.facebook.com/pages/Nutesupararo/957309300948336" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-width="350"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="propose">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect4">
+                    <h1>Propune un restaurant</h1>
+                    <div class="divider"></div>
+                    <p>Spune-ne despre un restaurant unde ai vrea sa chemi ospatarul direct cu telefonul</p>
+                </div>
+                <div class="row">
+                    <form role="form" onsubmit="return submitRestaurantForm();">
+                        <div class="form-group">
+                            <input id="restaurant-name" type="text" class="form-control" placeholder="Nume restaurant" />
+                        </div>
+                        <div class="form-group">
+                            <input id="restaurant-location" type="text" class="form-control" placeholder="Oraş" />
+                        </div>
+                        <div>
+                            <button class="btn btn-success btn-lg">Trimite propunerea</button>
+                        </div>
+                        <div>
+                            <p class="success-message">Multumimim! O sa le facem o vizita cat de curand.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div name="contact-us" class="container">
+                <h2 class="navbar-title">Nu te supăra</h2>
+                <div class="social">
+                    <a href="https://www.facebook.com/pages/Nutesupararo/957309300948336" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="https://twitter.com/NuSupara" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                </div>
+                <div class="rights">
+                    <a href="mailto:contact@nutesupara.ro" class="email" target="_blank">
+                        <i class="fa fa-envelope"></i>contact@nutesupara.ro
+                    </a>
+                    <p>Template by <a href="http://www.scoopthemes.com" target="_blank">ScoopThemes</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../js-lib/waypoints.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js-lib/modernizr.custom.js"></script>
+    <script src="../js-lib/classie.js"></script>
+    <script src="../js-lib/progressButton.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.4.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            appMaster.preLoader();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+.call-to-action {
+    font-family: 'Roboto';
+    text-align: center;
+    margin-top: 15px;
+}
+
+.center-align {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.progress-wrapper {
+    margin-left: -115px;
+    margin-top: -70px;
+}
+
+.notify-waiter {
+    padding: 30px;
+    border-radius: 50%;
+    font-size: 130px;
+    cursor: pointer;
+    margin-left: -96px;
+    margin-top: -51px;
+    border: 1px solid #b30808;
+    background-color: #e40a0a;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40a0a), to(#9f0202));
+    background-image: -webkit-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -moz-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -ms-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -o-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: linear-gradient(to bottom, #e40a0a, #9f0202);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#e40a0a, endColorstr=#9f0202);
+}
+
+.error {
+    color: #e40a0a;
+}
+
+.success {
+    color: forestgreen;
+}
+
+.hidden {
+    display: none;
+}
+
+.dummy-container {
+    height: calc();
+}
+
+.restaurant-name {
+    text-align: center;
+}
+
+.fb-like {
+    margin-left: 20px;
+}
+
+
+#like-box {
+    margin: 0 auto;
+    display: table;
+}
+
+.navigation-header {
+    width: 100%;
+    height: 43px;
+    background-color: #27488E;
+    padding: 5px 10px;
+}
+
+    .navigation-header .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+.back-button {
+    font-size: 35px;
+    color: white;
+    float: left;
+    cursor: pointer;
+}
+
+.right-button {
+    font-size: 35px;
+    color: white;
+    float: right;
+}
+
+.header-name {
+    color: white;
+    text-align: center;
+}
